@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pattern</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            div{margin-top:20px; margin-bottom:30px;}
+            .heart::before,.heart::after{
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+            .heart > div{
+                width: 150px;
+                height: 250px;
+                background: pink;
+                border-radius: 150px 150px 0 0;
+                position: absolute;
+            }
+            .heart .left{
+                background: yellowgreen;
+                transform:rotate(45deg);
+                -ms-transform:rotate(45deg); 	/* IE 9 */
+                -moz-transform:rotate(45deg); 	/* Firefox */
+                -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+                -o-transform:rotate(45deg); 	/* Opera */
+                left: 120px;
+            }
+            .heart .right{
+                background: yellowgreen;
+                left: 50px;
+                transform:rotate(-45deg);
+                -ms-transform:rotate(-45deg); 	/* IE 9 */
+                -moz-transform:rotate(-45deg); 	/* Firefox */
+                -webkit-transform:rotate(-45deg); /* Safari 和 Chrome */
+                -o-transform:rotate(-45deg); 	/* Opera */
+            }
+        </style>
+    </head>
+    <body>
+        <!--矩形-->
+        <div style="width: 300px; height: 100px; background: red;"></div>
+
+        <!--圆角矩形-->
+        <div style="width: 200px; height: 200px; background: red; border-radius:8px;"></div>
+
+        <!--圆形-->
+        <div style=" width: 300px; height: 300px; border-radius:300px; background:blue;"></div>
+
+        <!--特殊形状-->
+        <div style="width: 150px; height: 300px; background: pink; border-radius: 150px 150px 0 0;"></div>
+
+        <!--心形-->
+        <div class="heart">
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+
+        <!--六边形-->
+    </body>
+</html>
+
