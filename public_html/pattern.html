@@ -9,22 +9,25 @@
                 margin-top:20px;
                 margin-bottom:100px;
             }
+            img{
+                width: 100%;
+            }
             .rect{
                 width: 300px; 
                 height: 100px; 
-                background: red;
+                background: brown;
             }
             .rect-rounded{
                 width: 200px;
                 height: 200px;
-                background: red;
+                background: coral;
                 border-radius:8px;
             }
             .circle{
-                width: 300px;
-                height: 300px;
-                border-radius:300px;
-                background:blue;
+                width: 250px;
+                height: 250px;
+                border-radius: 250px;
+                background: darkseagreen;
             }
             .semi-circle{
                 width: 300px;
@@ -58,29 +61,69 @@
                 width: 0;
                 height: 0;
                 border:100px solid red;
-                border-top-color: blue;
-                border-bottom-color: transparent;
-                border-left-color: transparent;
-                border-right-color: transparent;
+                border-color: firebrick transparent transparent transparent;
             }
-            .heart{
-                overflow: hidden !important;
-            }
-            .heart::before,.heart::after{
-                content: "";
-                width: 100%;
-                height: 100%;
+            .bubble{
+                width: 300px;
+                height: 200px;
+                background: #660066;
+                border-radius: 10px;
                 position: relative;
             }
-            .heart > div{
+            .bubble::after{
+                content: "";
+                width:0;
+                height: 0;
+                border: 40px solid #660066;
+                border-color:transparent transparent transparent #660066;
+                position: absolute;
+                right: -79px;
+                top: 50px;
+            }
+            .special-circle{
                 width: 150px;
                 height: 250px;
                 background: pink;
                 border-radius: 150px 150px 0 0;
+                position: relative;
+            }
+            .hexagon-first{
+                width: 200px;
+                height: 250px;
+                margin: 0;
+                background: red;
+                transform: rotate(120deg);
+                visibility: hidden;
+                overflow: hidden;
+            }
+            .hexagon-second{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                background-color: green;
+                transform: rotate(-60deg);
+                visibility: hidden;
+                overflow: hidden;
+            }
+            .hexagon-third{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                background-color: blue;
+                transform: rotate(-60deg);
+                visibility: visible;
+                overflow: hidden;
+            }
+
+            .heart::before,.heart::after{
+                content: "";
+                background: yellowgreen;
+                width: 150px;
+                height: 250px;
+                border-radius: 150px 150px 0 0;
                 position: absolute;
             }
-            .heart .left{
-                background: yellowgreen;
+            .heart::before{
                 transform:rotate(45deg);
                 -ms-transform:rotate(45deg); 	/* IE 9 */
                 -moz-transform:rotate(45deg); 	/* Firefox */
@@ -88,8 +131,7 @@
                 -o-transform:rotate(45deg); 	/* Opera */
                 left: 120px;
             }
-            .heart .right{
-                background: yellowgreen;
+            .heart::after{
                 left: 50px;
                 transform:rotate(-45deg);
                 -ms-transform:rotate(-45deg); 	/* IE 9 */
@@ -112,26 +154,38 @@
         <!--半圆-->
         <div class="semi-circle"></div>
 
-        <!--扇形-->
-        <div class="sector"></div>
-        
-        <!--弧形-->
-        <div class="arc"></div>
-
         <!--特殊形状-->
         <div class="special-circle"></div>
+
+        <!--扇形-->
+        <div class="sector"></div>
+
+        <!--弧形-->
+        <div class="arc"></div>
 
         <!--三角形-->
         <div class="triangle"></div>
 
-        <!--心形-->
-        <div class="heart">
-            <div class="left"></div>
-            <div class="right"></div>
+        <!--对话框-->
+        <div class="bubble"></div>
+
+        <!--六边形-->
+        <div class="hexagon-first">
+            <div class="hexagon-second">
+                <div class="hexagon-third"></div>
+            </div>
+        </div>
+        <div class="hexagon-first">
+            <div class="hexagon-second">
+                <div class="hexagon-third" style="background-image: url(images/bg0.jpg); background-size: cover"></div>
+            </div>
         </div>
 
-        <!--五边形-->
-        <div></div>
+        <!--心形-->
+        <div class="heart">
+        </div>
+
+
     </body>
 </html>
 
